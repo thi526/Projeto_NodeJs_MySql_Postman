@@ -1,0 +1,50 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo geral da página */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #008cba;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Logo */
+  header img {
+    width: 100px;
+    display: block;
+    margin: 0 auto 10px;
+  }
+  
+  /* Conteúdo principal */
+  main {
+    margin: 20px 0;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Rodapé */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #eee;
+    color: #666;
+    font-size: 0.9em;
+    border-top: 1px solid #ccc;
+  }
+  

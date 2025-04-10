@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <%- include('partials/head') %>
+    <title>Cadastro de Produto</title>
+</head>
+<body>
+    <%- include('partials/nav', {currentPage: 'home'}) %>
+
+    <div class="container">
+        <h1>Cadastro de Produtos</h1>
+        
+        <form action="/produtos/criar" method="POST">
+            <input type="text" name="nome" placeholder="Nome do Produto" required>
+            <input type="number" name="preco" placeholder="Preço" step="0.01" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <h2>Consultar/Atualizar/Excluir</h2>
+        <form action="/produtos/buscar" method="GET">
+            <input type="number" name="id" placeholder="ID do Produto">
+            <button type="submit">Buscar</button>
+        </form>
+
+        <% if (produto) { %>
+            <form action="/produtos/atualizar" method="POST">
+                <input type="hidden" name="id" value="<%= produto.id %>">
+                <input type="text" name="nome" value="<%= produto.nome %>" required>
+                <input type="number" name="preco" value="<%= produto.preco %>" step="0.01" required>
+                <button type="submit">Atualizar</button>
+                <a href="/produtos/excluir/<%= produto.id %>" class="btn-delete">Excluir</a>
+            </form>
+        <% } %>
+    </div>
+    <%- include('partials/footer') %>
+</body>
+</html>

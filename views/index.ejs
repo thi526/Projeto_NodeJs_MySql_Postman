@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <%- include('partials/head') %>
+    <title>Home</title>
+</head>
+<body>
+    <%- include('partials/nav', {currentPage: 'home'}) %>
+    
+    <div class="container">
+        <h1>Sistema de Cadastro</h1>
+        <div class="links">
+            <a href="/cadastro-produto" class="btn">Cadastro de Produtos</a>
+            <a href="/cadastro-usuario" class="btn">Cadastro de Usuários</a>
+        </div>
+    </div>
+    <%- include('partials/footer') %>
+</body>
+</html>
